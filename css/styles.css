@@ -44,7 +44,7 @@ p
 }
 
 .container {
-    width: 320px;
+    max-width: 320px;
     padding-left: 16px;
     padding-right: 16px;
     margin: 0 auto;
@@ -83,8 +83,10 @@ p
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration: none;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    /* padding-top: 24px;
+    padding-bottom: 24px; */
+    padding-top: 16px;
+    padding-bottom: 16px;
     margin-right: 76px;
 }
 
@@ -102,11 +104,13 @@ color: #2e2f42;
 }
 
 .navigation-list {
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 40px;
 }
 
 .address {
+    display: none;
     font-style: normal;
     margin-left: auto;
 }
@@ -159,6 +163,22 @@ color: #2e2f42;
     height: 4px;
     border-radius: 2px;
     background-color: #404bbf;
+}
+
+.header-button{
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    margin-left: auto;
+}
+
+.header-btn-icon{
+    fill: #2f2f37;
 }
 
 /*         header           */
@@ -382,8 +402,10 @@ padding: 32px 0;
 /*         portfolio           */
 
 .portfolio {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 .portfolio-title {
@@ -404,7 +426,8 @@ padding: 32px 0;
 }
 
 .portfolio-container {
-    width: 360px;
+    /* width: 360px; */
+    width: 288px;
     height: 120px;
     padding: 32px 16px;
     border-bottom: 1px solid #e7e9fc;
@@ -416,6 +439,9 @@ padding: 32px 0;
 }
 
 .portfolio-image {
+    width: 288px;
+    height: 280px;
+    object-fit: cover;
 
 }
 
@@ -909,9 +935,35 @@ input[type="checkbox"]:checked+label .icon-checkbox {
 
 @media  screen and (min-width: 768px) {
     .container{
-        width: 768px;
+        max-width: 768px;
     }
     
+        /* header */
+    .logo {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .navigation-list {
+        display: flex;
+     }
+
+    .address {
+        display: flex;
+    }
+
+    .address-list {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+
+    .header-button{
+        display: none;
+    }
+
+        /* header */
+
         /* features */
     .features-item {
      width: calc((100% - 24px) / 2);
@@ -927,18 +979,55 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     }
         /* features */
 
-        
+        /* team */
+
+    .team .container,
+    .footer .container {
+        width: 552px;
+
     }
 
 
 
-@media screen and (min-width: 1158px) {
-    .container {
-        width: 1158px;
-        padding-left: 156px;
-        padding-right: 156px;
+        /* team */
+
+        /* portfolio */
+    .portfolio-list {
+            row-gap: 72px;
+            justify-content: center;
+        }
+
+    .portfolio-image {
+        width: 356px;
+        height: 300px;
     }
 
+    .portfolio-container {
+        width: 356px;
+    }
+
+        /* portfolio */
+    }
+
+
+
+@media screen and (min-width: 1158px)  {
+    .container, .team .container,
+        .footer .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* header */
+
+.address-list {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+    /* header */
 
     /* features */
     .features-item {
@@ -958,17 +1047,55 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     }
 
     .features-subtitle {
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 1.2;
-            letter-spacing: 0.02em;
-            color: #2e2f42;
-            margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        margin-bottom: 8px;
     }
 
     .features-text {
-            font-weight: 400;
+        font-weight: 400;
     }
 
     /* features */
+
+    /* team */
+
+    
+
+
+    /* team */
+
+
+    /* portfolio */
+    .portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .portfolio-container {
+        width: 360px;
+    }
+
+    .portfolio-image{
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolio-list {
+        justify-content: flex-start;
+    }
+
+
+     /* portfolio */
 }
+
+/* @media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 156px;
+        padding-right: 156px;
+    }
+} */
