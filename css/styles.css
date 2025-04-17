@@ -185,8 +185,10 @@ color: #2e2f42;
 
 /*         solutions           */
 .solutions {background-color: #2e2f42;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    /* padding-top: 188px;
+    padding-bottom: 188px; */
+    padding-top: 72px;
+    padding-bottom: 72px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7), 
         rgba(46, 47, 66, 0.7)
@@ -197,17 +199,23 @@ color: #2e2f42;
     background-position: center;
     max-width: 1440px;
     margin: 0 auto;
+    min-height: 432px;
 }
 
 .solutions-title {
-        font-size: 56px;
-        line-height: 1.07;
+        /* font-size: 56px; */
+        font-size: 36px;
+        /* line-height: 1.07; */
+        line-height: 1.1;
         letter-spacing: 0.02em;
         text-align: center;
         color: #fff;
-        margin-bottom: 48px;
-        max-width: 496px;
+        /* margin-bottom: 48px; */
+        margin-bottom: 72px;
+        /* max-width: 496px; */
+        width: 216px;
         margin: 0 auto;
+        font-weight: 700;
 }
 
 .solutions-button {
@@ -225,7 +233,8 @@ color: #2e2f42;
     margin-left: auto;
     height: 56px;
     min-width: 169px;
-    margin-top: 48px;
+    /* margin-top: 48px; */
+    margin-top: 72px;
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -307,8 +316,11 @@ color: #2e2f42;
 /*         team           */
 .team {
     background-color: #f4f4fd;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    /* padding-top: 120px;
+    padding-bottom: 120px; */
+
 }
 
 .team-title {
@@ -323,7 +335,11 @@ color: #2e2f42;
 
 .team-list {
     display: flex;
-    gap: 24px;
+    /* gap: 24px; */
+    gap: 72px;
+
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-member {
@@ -335,6 +351,8 @@ color: #2e2f42;
     flex-basis: calc((100% - 72px) / 4);
     border-radius: 0 0 4px 4px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    width: 100%;
+    max-width: 264px;
 }
 
 .div-team-subtitle{
@@ -503,10 +521,16 @@ padding: 32px 0;
 
 .footer-container {
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+
+    /* flex-direction: row; */
+
+    flex-direction: column;
+    align-items: center;
+
+    /* align-items: baseline; */
+    /* align-items: flex-start; */
     position: relative;
-    align-items: flex-start;
+
 }
 
 .footer-logo-text {
@@ -964,6 +988,29 @@ input[type="checkbox"]:checked+label .icon-checkbox {
 
         /* header */
 
+        /* solutions */
+
+    .solutions {
+        padding-top: 112px;
+        padding-bottom: 112px;
+        min-height: 436px;
+    }
+
+    .solutions-title {
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        margin-bottom: 48px;
+        width: 496px;
+        }
+
+    .solutions-button {
+        margin-top: 48px;
+    }
+
+
+        /* solutions */
+
         /* features */
     .features-item {
      width: calc((100% - 24px) / 2);
@@ -981,12 +1028,21 @@ input[type="checkbox"]:checked+label .icon-checkbox {
 
         /* team */
 
-    .team .container,
+    /* .team .container,
     .footer .container {
         width: 552px;
+    } */
 
-    }
+    .team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 64px 24px;
+        }
 
+    .team-member {
+        flex-basis: calc((100% - 24px) / 2);
+    }    
 
 
         /* team */
@@ -1029,6 +1085,17 @@ input[type="checkbox"]:checked+label .icon-checkbox {
 
     /* header */
 
+    /* solutions */
+
+    .solutions {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        min-height: 600px;
+    }
+
+    
+    /* solutions */
+
     /* features */
     .features-item {
          width: calc((100% - 3 * 24px) / 4);
@@ -1063,8 +1130,10 @@ input[type="checkbox"]:checked+label .icon-checkbox {
 
     /* team */
 
-    
-
+    .team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        }
 
     /* team */
 
