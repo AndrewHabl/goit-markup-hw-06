@@ -85,7 +85,6 @@ p
     text-decoration: none;
     padding-top: 16px;
     padding-bottom: 16px;
-    margin-right: 76px;
 }
 
 .logo-studio {
@@ -218,6 +217,7 @@ color: #2e2f42;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
 .modal-close-icon {}
@@ -272,7 +272,7 @@ color: #2e2f42;
 .mob-menu-soc-links-list {display: flex;
     gap: 40px;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .mob-menu-soc-link-item {display: flex;
@@ -307,7 +307,8 @@ color: #2e2f42;
 /*         header           */
 
 /*         solutions           */
-.solutions {background-color: #2e2f42;
+.solutions {
+    background-color: #2e2f42;
     padding-top: 72px;
     padding-bottom: 72px;
     background-image: linear-gradient(
@@ -316,11 +317,10 @@ color: #2e2f42;
         ),
      url(../images/hero-bg-mob.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
-    max-width: 1440px;
     margin: 0 auto;
     min-height: 432px;
+    max-width: 320px;
 }
 
 @media screen and (min-resolution: 2x) {
@@ -328,6 +328,7 @@ color: #2e2f42;
         background-image:linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/hero-bg-mob-2x.jpg);}
+        max-width: 320px;
 }
  
 .solutions-title {
@@ -406,6 +407,7 @@ color: #2e2f42;
         letter-spacing: 0.02em;
         text-align: center;
         color: #2e2f42;
+        margin-bottom: 8px;
 }
 
 .features-text {
@@ -729,7 +731,7 @@ padding: 32px 0;
 .footer-input {
     border: 1px solid #fff;
     border-radius: 4px;
-    width: 264px;
+    width: 288px;
     height: 40px;
     background: transparent;
     padding-left: 16px;
@@ -1070,6 +1072,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     .logo {
         padding-top: 24px;
         padding-bottom: 24px;
+        margin-right: 120px;
     }
 
     .navigation-list {
@@ -1086,14 +1089,22 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         gap: 12px;
     }
 
+    .address-item {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+    }
+
     .header-button{
         display: none;
     }
 
-
-
-
-
+    .mob-menu {
+        display: none;
+    }    
         /* header */
 
         /* solutions */
@@ -1105,6 +1116,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
                 url(../images/hero-bg-tab.jpg);
+        max-width: 768px;
     }
 
     @media screen and (min-resolution: 2x) {
@@ -1112,6 +1124,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         background-image:linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url(../images/hero-bg-tab-2x.jpg);}
+         max-width: 768px;
     }
 
     .solutions-title {
@@ -1218,6 +1231,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     
     .footer-input {
         margin-bottom: 0;
+        width: 264px;
     }
 
     .foot-tabl-logo-soc{
@@ -1233,6 +1247,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         padding: 72px 24px 24px;
     /* modal */
 }
+}
 
 
 @media screen and (min-width: 1158px)  {
@@ -1244,6 +1259,10 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     }
 
     /* header */
+.logo{
+    margin-right: 76px;
+}
+
 
 .address-list {
     flex-direction: row;
@@ -1251,6 +1270,13 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     gap: 40px;
 }
 
+ .address-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+ }
     /* header */
 
     /* solutions */
@@ -1262,6 +1288,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                     rgba(46, 47, 66, 0.7)),
                 url(../images/office.jpg);
+        max-width: 1158px;
     }
 
     @media screen and (min-resolution: 2x) {
@@ -1269,6 +1296,8 @@ input[type="checkbox"]:checked+label .icon-checkbox {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
             url(../images/hero-bg-desc-2x.jpg);
+
+        max-width: 1158px;
     }
 }
 
@@ -1276,6 +1305,11 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     /* solutions */
 
     /* features */
+
+    .features {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
     .features-item {
          width: calc((100% - 3 * 24px) / 4);
     }
@@ -1335,7 +1369,9 @@ input[type="checkbox"]:checked+label .icon-checkbox {
     .portfolio-list {
         justify-content: flex-start;
     }
-
+    .portfolio-list {
+        row-gap: 48px;
+    }
 
      /* portfolio */
 
