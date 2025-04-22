@@ -318,6 +318,7 @@ color: #2e2f42;
      url(../images/hero-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     margin: 0 auto;
     min-height: 432px;
     max-width: 320px;
@@ -1297,7 +1298,7 @@ input[type="checkbox"]:checked+label .icon-checkbox {
                 rgba(46, 47, 66, 0.7)),
             url(../images/hero-bg-desc-2x.jpg);
 
-        max-width: 1158px;
+        max-width: 1440px;
     }
 }
 
